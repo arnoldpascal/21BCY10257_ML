@@ -17,16 +17,22 @@ This project implements a Document Retrieval System for chat applications, desig
 ### 1. Local Setup
 
 1. **Install dependencies:**
-   
--- pip install -r requirements.txt
+
+```
+pip install -r requirements.txt
+```
 
 2. **Initialize the database:**
 
--- python -c "from app.models import init_db; init_db()"
+```
+python -c "from app.models import init_db; init_db()"
+```
 
 3. **Run the FastAPI server:**
 
--- uvicorn app.api:app --reload
+```
+uvicorn app.api:app --reload
+```
 
 Access the API:
 
@@ -37,11 +43,15 @@ Access the API:
 
 1. Build the Docker image:
 
--- docker build -t document-retrieval .
+```
+docker build -t document-retrieval
+```
 
 2. Run the Docker container:
 
--- docker run -p 8000:8000 document-retrieval
+```
+docker run -p 8000:8000 document-retrieval
+```
 
 ### 3. Design Choices
 
@@ -49,5 +59,5 @@ Access the API:
 - SQLite: For simplicity; can be switched to PostgreSQL for production
 - Redis: For caching and optimization
 
-## Collaborator
+### Collaborator
 - recruitments@trademarkia.com
